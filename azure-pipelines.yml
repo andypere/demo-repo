@@ -6,6 +6,14 @@
 trigger:
 - master
 
+pr:
+- 'azure-pipelines'
+
+steps:
+ - script: 'dotnet restore ./Pizzastore/Pizzastore.sln'
+ - script: 'dotnet build ./Pizzastore/Pizzastore.sln'
+
+
 pool:
   vmImage: 'Ubuntu-16.04'
 
